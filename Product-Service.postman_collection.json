@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "73f05e92-56f6-4b3a-9c41-6a81ae96ee0a",
+		"name": "Product-Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All-products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8091/product",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8091/product/62c33965f77d823ff2070e6e",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"product",
+						"62c33965f77d823ff2070e6e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add-Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"MSI Gaming Mouse\",\r\n    \"price\": 86\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8091/product",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Product-Range",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8091/product/price-range?min=1&max=10",
+					"host": [
+						"localhost"
+					],
+					"port": "8091",
+					"path": [
+						"product",
+						"price-range"
+					],
+					"query": [
+						{
+							"key": "min",
+							"value": "1"
+						},
+						{
+							"key": "max",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

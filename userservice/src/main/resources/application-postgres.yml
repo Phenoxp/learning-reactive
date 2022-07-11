@@ -1,0 +1,14 @@
+# To activate this profile, add this VM arguments:
+# -Dspring.profiles.active=postgres
+# uncomment the postgres line in pom.xml
+# then you need to manually create the db user in postgres admin (localhost:9000, username: root, password: admin)
+# and create the table
+
+server:
+  port: 8092
+
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/user
+    username: root
+    password: admin

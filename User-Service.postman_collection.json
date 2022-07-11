@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "11cf52ba-555f-4f26-a7a7-006f6bfbaa39",
+		"name": "User-Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All-Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8092/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add-User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nerva\",\r\n    \"balance\": 500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8092/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update-User",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Mike\",\r\n    \"balance\": 1200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8092/user/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8092/user/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete-User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8092/user/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"user",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add-Transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\": 1,\r\n    \"amount\": 300\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8092/user/transaction",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"user",
+						"transaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All UserTransactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8092/user/transaction?userId=3",
+					"host": [
+						"localhost"
+					],
+					"port": "8092",
+					"path": [
+						"user",
+						"transaction"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

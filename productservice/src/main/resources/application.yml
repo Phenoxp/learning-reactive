@@ -1,0 +1,14 @@
+server:
+  port: 8091
+
+spring:
+  data:
+    mongodb:
+      database: product
+      #host: localhost
+      #port: 27017
+      #username:
+      #password:
+  mongodb:
+    embedded:
+      version: 3.6.2
